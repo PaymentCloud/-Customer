@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="paymentcloud.creaj.sv.com.customerspcloud">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:debuggable="true" android:testOnly="true" android:allowBackup="true" android:supportsRtl="true" android:roundIcon="@mipmap/ic_launcher_round">
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="paymentcloud.creaj.sv.com.customerspcloud.InitialActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:name="paymentcloud.creaj.sv.com.customerspcloud.SecondActivity" />
+        <activity android:name="paymentcloud.creaj.sv.com.customerspcloud.Customer" />
+        <activity android:theme="@style/AppLoginTheme" android:label="@string/com_accountkit_button_log_in" android:name="com.facebook.accountkit.ui.AccountKitActivity" android:launchMode="singleTop" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/ak_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+        <meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@string/app_name" />
+        <meta-data android:name="com.facebook.accountkit.FacebookAppEventsEnabled" android:value="false" />
+        <activity android:label="@string/title_activity_login" android:name="paymentcloud.creaj.sv.com.customerspcloud.Login">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/my.uniqueapp.nfc" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity" android:exported="true" android:noHistory="true" />
+        <provider android:name="com.facebook.accountkit.internal.AccountKitInitProvider" android:exported="false" android:authorities="paymentcloud.creaj.sv.com.customerspcloud.AccountKitInitialization" />
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true" />
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
+    </application>
+</manifest>
