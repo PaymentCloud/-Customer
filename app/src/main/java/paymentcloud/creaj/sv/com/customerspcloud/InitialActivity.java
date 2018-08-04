@@ -70,7 +70,7 @@ public class InitialActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) C0434R.layout.activity_initial);
+        setContentView((int) R.layout.activity_initial);
         Log.d("Cycle", "Oncreate");
         getObjects();
         setProperties();
@@ -99,10 +99,10 @@ public class InitialActivity extends AppCompatActivity {
     }
 
     private void getObjects() {
-        this.mBtnEmailLogin = (Button) findViewById(C0434R.id.btnEmailLogin);
-        this.mBtnPhoneLogin = (Button) findViewById(C0434R.id.btnPhoneLogin);
-        this.mLytLoading = (LinearLayout) findViewById(C0434R.id.lytLoading);
-        this.kbv = (KenBurnsView) findViewById(C0434R.id.image);
+        this.mBtnEmailLogin = (Button) findViewById(R.id.btnEmailLogin);
+        this.mBtnPhoneLogin = (Button) findViewById(R.id.btnPhoneLogin);
+        this.mLytLoading = (LinearLayout) findViewById(R.id.lytLoading);
+        this.kbv = (KenBurnsView) findViewById(R.id.image);
     }
 
     private void setProperties() {
@@ -118,7 +118,7 @@ public class InitialActivity extends AppCompatActivity {
         LoginType loginType = isSMSLogin ? LoginType.PHONE : LoginType.EMAIL;
         Intent intent = new Intent(getApplicationContext(), AccountKitActivity.class);
         AccountKitConfigurationBuilder configurationBuilder = new AccountKitConfigurationBuilder(loginType, ResponseType.TOKEN);
-        configurationBuilder.setUIManager(new SkinManager(Skin.CONTEMPORARY, getResources().getColor(C0434R.color.colorPrimary), C0434R.drawable.background, Tint.BLACK, 0.1d));
+        configurationBuilder.setUIManager(new SkinManager(Skin.CONTEMPORARY, getResources().getColor(R.color.colorPrimary), R.drawable.background, Tint.BLACK, 0.1d));
         intent.putExtra(AccountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION, configurationBuilder.build());
         startActivityForResult(intent, APP_REQUEST_CODE);
     }

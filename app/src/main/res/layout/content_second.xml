@@ -110,6 +110,15 @@
                 android:gravity="bottom|center_horizontal" >
 
                 <Button
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:backgroundTint="#4E86FF"
+
+                    android:text="Logout"
+                    android:textColor="#FFFFFF" />
+                <Button
                     android:id="@+id/btnLogout"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"

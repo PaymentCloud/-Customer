@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class Customer extends AppCompatActivity {
     Button btnLogout;
-    boolean doubleBackToExitPressedOnce = false;
+
     TextView e1;
     TextView e2;
     TextView e3;
@@ -54,17 +54,17 @@ public class Customer extends AppCompatActivity {
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) C0434R.layout.customer);
+        setContentView((int) R.layout.customer);
         getObjects();
         this.btnLogout.setOnClickListener(new C04261());
     }
 
     private void getObjects() {
-        this.e1 = (TextView) findViewById(C0434R.id.txtName);
-        this.e2 = (TextView) findViewById(C0434R.id.txtEmail);
-        this.e3 = (TextView) findViewById(C0434R.id.txtWallet);
-        this.e4 = (TextView) findViewById(C0434R.id.txtBalance);
-        this.btnLogout = (Button) findViewById(C0434R.id.btnLogout);
+        this.e1 = (TextView) findViewById(R.id.txtName);
+        this.e2 = (TextView) findViewById(R.id.txtEmail);
+        this.e3 = (TextView) findViewById(R.id.txtWallet);
+        this.e4 = (TextView) findViewById(R.id.txtBalance);
+        this.btnLogout = (Button) findViewById(R.id.btnLogout);
         setData();
     }
 

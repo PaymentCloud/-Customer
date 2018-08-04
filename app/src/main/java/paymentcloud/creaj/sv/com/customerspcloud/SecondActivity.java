@@ -75,7 +75,7 @@ public class SecondActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) C0434R.layout.activity_second);
+        setContentView((int) R.layout.activity_second);
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("is_logged", false)) {
             startActivity(new Intent(this, Customer.class));
             finish();
@@ -85,12 +85,13 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void getObjects() {
-        this.mToolbar = (Toolbar) findViewById(C0434R.id.toolbar);
-        this.mTxtAccountKitID = (TextView) findViewById(C0434R.id.txtAccountKitID);
-        this.mTxtUserLoginMode = (TextView) findViewById(C0434R.id.txtUserLoginMode);
-        this.mTxtUserLoginData = (TextView) findViewById(C0434R.id.txtUserLoginData);
-        this.mBtnLogout = (Button) findViewById(C0434R.id.btnLogout);
-        this.mBtnSignIn = (Button) findViewById(C0434R.id.btnSignIn);
+        this.mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        this.mTxtAccountKitID = (TextView) findViewById(R.id.txtAccountKitID);
+        this.mTxtUserLoginMode = (TextView) findViewById(R.id.txtUserLoginMode);
+        this.mTxtUserLoginData = (TextView) findViewById(R.id.txtUserLoginData);
+
+        this.mBtnLogout = (Button) findViewById(R.id.btnLogout);
+        this.mBtnSignIn = (Button) findViewById(R.id.btnSignIn);
     }
 
     private void setProperties() {
