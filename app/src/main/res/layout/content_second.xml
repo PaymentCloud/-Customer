@@ -31,17 +31,11 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:text="My Account"
+                    android:text="Cuenta Verificada"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="30dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_horizontal"
-                    android:text="This example shows how to implement Facebook AccountKit in Android using Java."
-                    android:textColor="#000000" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -116,7 +110,7 @@
                     android:layout_marginBottom="60dp"
                     android:backgroundTint="#4E86FF"
 
-                    android:text="Logout"
+                    android:text="Ingresar"
                     android:textColor="#FFFFFF" />
                 <Button
                     android:id="@+id/btnLogout"
@@ -125,7 +119,7 @@
                     android:layout_marginBottom="60dp"
                     android:backgroundTint="#4E86FF"
                     android:onClick="LogOut"
-                    android:text="Logout"
+                    android:text="Regresar al inicio"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
