@@ -32,6 +32,7 @@
             android:name=".SecondActivity" />
 
         <activity android:name=".Customer"
+            android:label="Customer"
             android:theme="@style/Theme.AppCompat"/>
 
         <activity android:theme="@style/AppLoginTheme"
@@ -61,6 +62,7 @@
         <activity android:label="Customer"
             android:name=".Login"
             android:theme="@style/Theme.AppCompat"
+
             >
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
