@@ -20,7 +20,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             credit = (TextView) view.findViewById(R.id.credit);
-            //year = (TextView) view.findViewById(R.id.year);
+            year = (TextView) view.findViewById(R.id.date);
         }
     }
 
@@ -51,7 +51,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         }
 
 
-        //holder.year.setText(movie.getYear());
+        holder.year.setText(historial.getCreatedAt());
     }
 
     @Override

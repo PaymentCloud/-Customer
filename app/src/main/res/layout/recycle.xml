@@ -8,13 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cv"
-        android:padding="10dp"
+
+        android:background="@color/paymentcloud"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+
+
             >
 
             <ImageView
@@ -34,6 +36,8 @@
                 android:layout_toRightOf="@+id/person_photo"
                 android:layout_alignParentTop="true"
                 android:textSize="25dp"
+                android:text="sasadsdd"
+                android:gravity="center"
                 />
 
             <TextView
@@ -44,6 +48,7 @@
                 android:layout_below="@+id/title"
                 android:gravity="center"
                 android:textSize="20sp"
+                android:text="dsdsdsd"
 
                 />
 
@@ -52,8 +57,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/date"
                 android:layout_toRightOf="@+id/person_photo"
-                android:layout_below="@+id/title"
+                android:layout_below="@+id/credit"
                 android:gravity="center"
+                android:text="sdsad"
+                android:textSize="12dp"
 
 
                 />

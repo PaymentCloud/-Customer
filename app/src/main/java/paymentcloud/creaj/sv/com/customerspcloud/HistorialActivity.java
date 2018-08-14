@@ -1,5 +1,7 @@
 package paymentcloud.creaj.sv.com.customerspcloud;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -43,8 +45,7 @@ public class HistorialActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_historial);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
+
 
             recyclerView = (RecyclerView) findViewById(R.id.recycleview);
             queue = Volley.newRequestQueue(this);
@@ -111,8 +112,10 @@ public class HistorialActivity extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams()
                 {
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     Map<String, String>  params = new HashMap<String, String>();
-                    params.put("wallet_id", "2");
+                    String wallet = prefs.getString("id_wallet", null);
+                    params.put("wallet_id", wallet);
 
 
                     return params;

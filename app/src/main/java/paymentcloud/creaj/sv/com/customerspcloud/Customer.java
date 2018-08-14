@@ -14,12 +14,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Customer extends AppCompatActivity {
-    Button btnLogout;
+    Button btnLogout, btnHistorial;
 
     TextView e1;
     TextView e2;
     TextView e3;
     TextView e4;
+
 
     class C04261 implements OnClickListener {
         C04261() {
@@ -57,6 +58,17 @@ public class Customer extends AppCompatActivity {
         setContentView((int) R.layout.customer);
         getObjects();
         this.btnLogout.setOnClickListener(new C04261());
+
+        btnHistorial = findViewById(R.id.btnHistorial);
+        btnHistorial.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), HistorialActivity.class);
+                startActivity(i);
+            }
+        });
+
+
     }
 
     private void getObjects() {
@@ -65,6 +77,7 @@ public class Customer extends AppCompatActivity {
         this.e3 = (TextView) findViewById(R.id.txtWallet);
         this.e4 = (TextView) findViewById(R.id.txtBalance);
         this.btnLogout = (Button) findViewById(R.id.btnLogout);
+
         setData();
     }
 
