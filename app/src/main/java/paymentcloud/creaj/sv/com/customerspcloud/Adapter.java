@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -41,8 +42,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Historial historial = historialList.get(position);
 
-        holder.title.setText(historial.getDescription().toString());
-        if (historial.getDescription().equals("Recarga")){
+        holder.title.setText(historial.getCustomDescription().toString());
+        if (historial.getOperation().equals("A")){
             holder.credit.setTextColor(Color.parseColor("#007f00"));
             holder.credit.setText("+"+historial.getAmount().toString());
         }else{

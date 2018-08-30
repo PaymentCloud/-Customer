@@ -19,12 +19,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Cliente"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
             android:name=".InitialActivity"
-            android:label="@string/app_name"
+            android:label="Cliente"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +38,7 @@
 
         <activity
             android:name=".Customer"
-            android:label="Customer"
+            android:label="Cliente"
             android:theme="@style/Theme.AppCompat" />
         <activity
             android:name="com.facebook.accountkit.ui.AccountKitActivity"
@@ -69,7 +69,7 @@
 
         <activity
             android:name=".Login"
-            android:label="Customer"
+            android:label="Cliente"
             android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />

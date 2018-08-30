@@ -30,6 +30,9 @@ public class Historial {
     @SerializedName("wallet_id")
     @Expose
     private String walletId;
+    @SerializedName("custom_description")
+    @Expose
+    private String customDescription;
 
     public String getId() {
         return id;
@@ -93,6 +96,14 @@ public class Historial {
 
     public void setWalletId(String walletId) {
         this.walletId = walletId;
+    }
+
+    public String getCustomDescription() {
+        return customDescription;
+    }
+
+    public void setCustomDescription(String customDescription) {
+        this.customDescription = customDescription;
     }
 
 }
